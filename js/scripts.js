@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  $("button#scramble").click(function(event) {
+  $("form.form").submit(function(event) {
     var inputSentence = $("input#inputSentence").val();
     if (!inputSentence) {
       alert('Please enter a sentence');
@@ -13,6 +13,7 @@ $(document).ready(function() {
     }
     var outputSentence = letters.join("");
     $("#output").append(outputSentence);
+    $(".form").hide();
     (event).preventDefault();
   });
 });
